@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BulletinBoard
 Ruby on Rails
 =======
@@ -26,4 +25,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
->>>>>>> 4b5107f (initial commit for rails)
+
