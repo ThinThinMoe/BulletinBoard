@@ -11,27 +11,40 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group mt-3">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control #{'is-invalid' if user.errors.include?(:name)}" %>
+    <% if user.errors.include?(:name) %>
+    <%= form.label user.errors.full_messages_for(:name).first, class: 'text-danger' %>
+    <% end %>
   </div>
 
-  <div class="field">
+  <div class="form-group mt-3">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control #{'is-invalid' if user.errors.include?(:email)}" %>
+    <% if user.errors.include?(:email) %>
+    <%= form.label user.errors.full_messages_for(:email).first, class: 'text-danger' %>
+    <% end %>
   </div>
 
-  <div class="field">
+  <div class="form-group mt-3">
     <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, class: "form-control #{'is-invalid' if user.errors.include?(:address)}" %>
+    <% if user.errors.include?(:address) %>
+    <%= form.label user.errors.full_messages_for(:address).first, class: 'text-danger' %>
+    <% end %>
   </div>
 
-  <div class="field">
+  <div class="form-group mt-3">
     <%= form.label :contact %>
-    <%= form.text_field :contact %>
+    <%= form.text_field :contact, class: "form-control #{'is-invalid' if user.errors.include?(:contact)}" %>
+    <% if user.errors.include?(:contact) %>
+    <%= form.label user.errors.full_messages_for(:contact).first, class: 'text-danger' %>
+    <% end %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group mt-5">
+    <%= form.submit class: "btn btn-outline-success" %>
+    <%= link_to 'Back', users_path, class: "btn btn-outline-dark" %>
   </div>
 <% end %>
