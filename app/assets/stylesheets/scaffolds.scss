@@ -63,3 +63,8 @@ div.actions {
 
 label {
   display: block; }
+
+.modal-body {
+  max-height: 400px;
+  overflow-y: scroll;
+}

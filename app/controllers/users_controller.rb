@@ -44,9 +44,9 @@ class UsersController < ApplicationController
         format.json { render :show, status: :ok, location: @user }
         format.js
       else
-        format.js
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
