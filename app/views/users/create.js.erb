@@ -1,5 +1,5 @@
 <% if @user.errors.any? %>
-    $("#errorArea").html("<%= escape_javascript render('error', user: @user) %>");
+    $("#newUserModal #errorArea").html("<%= escape_javascript render('error', user: @user) %>");
 <% else %>
     $("#usersTable").prepend("<%= escape_javascript render('user_row', user: @user) %>");
     $(".close-modal").click();
